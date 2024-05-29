@@ -99,7 +99,7 @@ if __name__ == "__main__":
                 answer_choice = st.form_submit_button("Submit")
                 
                 
-                # Step 8: Use the example below to navigate to the next and previous questions
+                #Step 8: Use the example below to navigate to the next and previous questions
                 # Here we use the next_question_index method from our quiz_manager class
                 if st.form_submit_button("Next Question"):
                     quiz_manager.next_question_index(direction=1)
