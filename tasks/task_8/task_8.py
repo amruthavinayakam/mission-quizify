@@ -125,19 +125,19 @@ class QuizGenerator:
         self.question_bank = [] # Reset the question bank
 
         for _ in range(self.num_questions):
-            ##### YOUR CODE HERE #####
+            
             question_str = self.generate_question_with_vectorstore()# Use class method to generate question
             
-            ##### YOUR CODE HERE #####
+            
             try:
                 # Convert the JSON String to a dictionary
                 question=json.loads(question_str)
             except json.JSONDecodeError:
                 print("Failed to decode question JSON.")
                 continue  # Skip this iteration if JSON decoding fails
-            ##### YOUR CODE HERE #####
+            
 
-            ##### YOUR CODE HERE #####
+            
             # Validate the question using the validate_question method
             if self.validate_question(question):
                 print("Successfully generated unique question")
@@ -145,7 +145,7 @@ class QuizGenerator:
                 # Add the valid and unique question to the bank
             else:
                 print("Duplicate or invalid question detected.")
-            ##### YOUR CODE HERE #####
+            
 
         return self.question_bank
 
@@ -169,7 +169,7 @@ class QuizGenerator:
 
         Note: This method assumes `question` is a valid dictionary and `question_bank` has been properly initialized.
         """
-        ##### YOUR CODE HERE #####
+        
         question_text = question.get("question", "")
         if not question_text:
             return False
@@ -181,7 +181,7 @@ class QuizGenerator:
         return True
         # Consider missing 'question' key as invalid in the dict object
         # Check if a question with the same text already exists in the self.question_bank
-        ##### YOUR CODE HERE #####
+        
         #return is_unique
 
 
